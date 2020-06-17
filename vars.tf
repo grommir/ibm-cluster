@@ -11,5 +11,5 @@ variable "vpc1_name" { default = "vpc1-test" }
 variable "vpc1_subnet_name" { default = "vpc1-test-testsubnet" }
 # Cluster
 variable "flavor_default" { default = "cx2.2x4" }
-variable "default_pool_size" { default = "1" }
+variable "default_pool_size" { default = "2" }
 variable "vpc1_cluster_name" { default = "vpc1-test-cluster" }
