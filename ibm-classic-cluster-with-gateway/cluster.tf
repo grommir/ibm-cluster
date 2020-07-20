@@ -1,5 +1,9 @@
 provider "ibm" {}
 
+variable "ibmcloud_api_key" {}
+variable "iaas_classic_username" {}
+variable "iaas_classic_api_key" {}
+
 variable "hardware_type" { default = "shared" }
 variable "dal10_public_vlan" { default = "k8s-dal10.1pub-prod" }
 variable "dal10_private_vlan" { default = "k8s-dal10.1priv-prod" }
