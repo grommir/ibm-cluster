@@ -12,12 +12,12 @@ data ibm_resource_group "resource_group" {
 resource ibm_container_cluster "iks_cluster" {
     name                        = var.cluster_name
     datacenter                  = "dal10"
-    machine_type                = "u3c.2x4"
+    machine_type                = var.machine_type
     hardware                    = var.hardware_type
     public_vlan_id              = data.ibm_network_vlan.dal10_public_vlan.id
     private_vlan_id             = data.ibm_network_vlan.dal10_private_vlan.id
     default_pool_size           = 1
-    public_service_endpoint     = "true"
+    public_service_endpoint     = "false"
     private_service_endpoint    = "true"
     resource_group_id           = data.ibm_resource_group.resource_group.id
     gateway_enabled             = "true"
