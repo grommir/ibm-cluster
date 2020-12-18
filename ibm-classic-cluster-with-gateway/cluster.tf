@@ -11,7 +11,7 @@ data ibm_resource_group "resource_group" {
 # create cluster
 resource ibm_container_cluster "iks_cluster" {
     name                        = var.cluster_name
-    datacenter                  = "dal10"
+    datacenter                  = var.datacenter
     machine_type                = var.machine_type
     hardware                    = var.hardware_type
     public_vlan_id              = data.ibm_network_vlan.dal10_public_vlan.id
