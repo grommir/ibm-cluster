@@ -1,6 +1,6 @@
 # Create jenkins service account for cluster with required policies
 resource "ibm_iam_service_id" "svc_iam_id" {
-    name        = "svc-jenkins-kubernetes-prod"
+    name        = "svc-jenkins-kubernetes-${var.cluster_name}"
     description = "Jenkins service account for iks prod cluster"
 }
 
