@@ -36,6 +36,5 @@ resource ibm_container_alb_cert ssl_cert {
   secret_name = var.ssl_certs[count.index].certificate_name
   cluster_id  = ibm_container_cluster.iks_cluster.id
   persistence = true
-  depends_on = [
-  ibm_container_cluster.iks_cluster]
+  depends_on  = [ibm_container_cluster.iks_cluster]
 }
