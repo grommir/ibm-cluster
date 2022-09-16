@@ -5,11 +5,11 @@ data "ibm_network_vlan" "public_vlan" {
 data "ibm_network_vlan" "private_vlan" {
   name = var.private_vlan
 }
-data ibm_resource_group "resource_group" {
+data "ibm_resource_group" "resource_group" {
   name = var.resource_group
 }
 # create cluster
-resource ibm_container_cluster "iks_cluster" {
+resource "ibm_container_cluster" "iks_cluster" {
   name                     = var.cluster_name
   datacenter               = var.datacenter
   machine_type             = var.machine_type
@@ -29,7 +29,7 @@ output "cluster_data" {
 }
 
 # add certificates to cluster
-resource ibm_container_alb_cert ssl_cert {
+resource "ibm_container_alb_cert" "ssl_cert" {
   count = length(var.ssl_certs)
 
   cert_crn    = var.ssl_certs[count.index].certificate_crn
