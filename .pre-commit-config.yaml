@@ -6,3 +6,21 @@ repos:
       args:
         - --args=-recursive
     - id: terraform_tflint
+
+- repo: https://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.75.0
+  hooks:
+    - id: terraform_docs
+      args:
+        - --hook-config=--path-to-file=ibm-classic-cluster-with-gateway/README.md
+        - --hook-config=--add-to-existing-file=true
+        - --hook-config=--create-file-if-not-exist=true
+
+- repo: https://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.75.0
+  hooks:
+    - id: terraform_docs
+      args:
+        - --hook-config=--path-to-file=ibm-vpc-cluster/README.md
+        - --hook-config=--add-to-existing-file=true
+        - --hook-config=--create-file-if-not-exist=true

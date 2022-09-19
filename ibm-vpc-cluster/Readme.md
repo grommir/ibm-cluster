@@ -1,1 +1,3 @@
-Sample terraform code for IBM VPC gen 2 cluster
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
